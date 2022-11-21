@@ -1,0 +1,87 @@
+@import "nullstyle.scss";
+
+body {
+    @include flex(center, center);
+    min-height: 100vh;
+    background-color: steelblue;
+}
+
+form {
+    @include flex(baseline, $fDirection: column, $rGap: 20);
+    border-radius: 10px;
+    background-color: white;
+    padding: 30px;
+    width: 500px;
+
+    & label {
+        @include flex(center, $cGap: 5);
+        cursor: pointer;
+
+        & input {
+            display: none;
+        }
+
+        & span:not(:empty) {
+            font-weight: 700;
+        }
+
+        & .iconbox {
+            display: inline-block;
+            width: 25px;
+            height: 25px;
+            border-radius: 5px;
+            border: 1.5px solid #222222;
+            transition: linear .2s;
+        }
+
+        & input[value]:checked+.iconbox {
+            box-shadow: 0 0 2px 3px #0E85F3;
+        }
+
+        & input[value="table tennis"]:checked+.iconbox {
+            background: url(./assets/icons/table-tennis.png) center / 15px 15px no-repeat;
+        }
+
+        & input[value="basketball"]:checked+.iconbox {
+            background: url(./assets/icons/basketball-ball.png) center / 15px 15px no-repeat;
+        }
+
+        & input[value="volleyball"]:checked+.iconbox {
+            background: url(./assets/icons/volleyball-ball.png) center / 15px 15px no-repeat;
+        }
+
+        & input[value="hockey"]:checked+.iconbox {
+            background: url(./assets/icons/hockey-puck.png) center / 15px 15px no-repeat;
+        }
+    }
+
+    & input:where([value]):disabled~span {
+        border-color: lightgray;
+        opacity: .7;
+    }
+
+    & input:disabled:checked~span.iconbox {
+        box-shadow: none;
+    }
+
+    & button {
+        padding: 5px 15px;
+        border-radius: 5px;
+        font-size: 1.5em;
+        font-weight: 700;
+        align-self: center;
+        transition: linear .2s;
+        background-color: white;
+
+        &:hover {
+            padding: 5px 25px;
+            background-color: deepskyblue;
+        }
+    }
+
+    & button[type="reset"] {
+        &:hover {
+            background-color: crimson;
+        }
+    }
+}

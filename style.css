@@ -1,0 +1,214 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a {
+  display: inline-block;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+img {
+  display: block;
+}
+
+.flow {
+  --flow-space: 1em;
+}
+
+.flow > * + * {
+  margin-top: 1em;
+  margin-top: var(--flow-space);
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 16px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  min-height: 100vh;
+  background-color: steelblue;
+}
+
+form {
+  display: flex;
+  align-items: baseline;
+  justify-content: flex-start;
+  flex-direction: column;
+  row-gap: 20px;
+  border-radius: 10px;
+  background-color: white;
+  padding: 30px;
+  width: 500px;
+}
+form label {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  -moz-column-gap: 5px;
+       column-gap: 5px;
+  cursor: pointer;
+}
+form label input {
+  display: none;
+}
+form label span:not(:empty) {
+  font-weight: 700;
+}
+form label .iconbox {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  border-radius: 5px;
+  border: 1.5px solid #222222;
+  transition: linear 0.2s;
+}
+form label input[value]:checked + .iconbox {
+  box-shadow: 0 0 2px 3px #0E85F3;
+}
+form label input[value="table tennis"]:checked + .iconbox {
+  background: url(./assets/icons/table-tennis.png) center/15px 15px no-repeat;
+}
+form label input[value=basketball]:checked + .iconbox {
+  background: url(./assets/icons/basketball-ball.png) center/15px 15px no-repeat;
+}
+form label input[value=volleyball]:checked + .iconbox {
+  background: url(./assets/icons/volleyball-ball.png) center/15px 15px no-repeat;
+}
+form label input[value=hockey]:checked + .iconbox {
+  background: url(./assets/icons/hockey-puck.png) center/15px 15px no-repeat;
+}
+form input:where([value]):disabled ~ span {
+  border-color: lightgray;
+  opacity: 0.7;
+}
+form input:disabled:checked ~ span.iconbox {
+  box-shadow: none;
+}
+form button {
+  padding: 5px 15px;
+  border-radius: 5px;
+  font-size: 1.5em;
+  font-weight: 700;
+  align-self: center;
+  transition: linear 0.2s;
+  background-color: white;
+}
+form button:hover {
+  padding: 5px 25px;
+  background-color: deepskyblue;
+}
+form button[type=reset]:hover {
+  background-color: crimson;
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="blah blah">
+    <meta name="keywords" content="blah,key, blah">
+    <link rel="stylesheet" href="style.css">
+    <title>Custom checkbox</title>
+</head>
+<body>
+    <form action="https://echo.htmlacademy.ru" method="post" enctype="multipart/form-data">
+        <label for="tableT">
+            <input id="tableT" type="checkbox" name="favorite__sport" value="table tennis" disabled>
+            <span class="iconbox"></span>
+            <span>Table tennis</span>
+        </label>
+
+        <label for="basketball">
+            <input id="basketball" type="checkbox" name="favorite__sport" value="basketball" checked disabled>
+            <span class="iconbox"></span>
+            <span>Basketball</span>
+        </label>
+
+        <label for="volleyball">
+            <input id="volleyball" type="checkbox" name="favorite__sport" value="volleyball">
+            <span class="iconbox"></span>
+            <span>Volleyball</span>
+        </label>
+
+        <label for="hockey">
+            <input id="hockey" type="checkbox" name="favorite__sport" value="hockey">
+            <span class="iconbox"></span>
+            <span>Hockey</span>
+        </label>
+        
+        <button type="submit">Send</button>
+        <button type="reset">Reset</button>
+        
+    </form>
+</body>
+</html>
